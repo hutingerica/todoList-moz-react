@@ -14,12 +14,14 @@ function App(props) {
       completed={task.completed}
       toggleTaskCompleted={toggleTaskCompleted}
       deleteTask={deleteTask}
+      editTask={editTask}
       key={task.id}
       />
   ));
   const tasksNoun = taskList.length !== 1 ? "tasks" : "task";
   const headingText = `${taskList.length} ${tasksNoun} remaining`;
   
+
   function addTask(name){
     const newTask = {id: "todo-" + nanoid(), name: name, completed: false };
     console.log(newTask);
@@ -41,6 +43,17 @@ function App(props) {
   function deleteTask(id){
     const remainingTasks = tasks.filter(task => id !== task.id);
     setTasks(remainingTasks);
+  }
+
+  function editTask(newName,id){
+    console.log(newName)
+    const editedTaskList = tasks.map(task => {
+      if (id === task.id) {
+        return {...task, "name": newName}
+      }
+      return task;
+    });
+    setTasks(editedTaskList);
   }
 
   return (
