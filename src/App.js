@@ -1,11 +1,13 @@
-import React from 'react';
-import Todo from './components/Todo'
-import Form from './components/Form'
-import FilterButton from './components/FilterButton'
+import React, { useState } from 'react';
+import { nanoid } from "nanoid";
+
+import Todo from './components/Todo';
+import Form from './components/Form';
+import FilterButton from './components/FilterButton';
 
 function App(props) {
-  console.log(props.tasks);
-  const taskList = props.tasks.map(task => (
+  const [tasks, setTasks] = useState(props.tasks);
+  const taskList = tasks.map(task => (
     <Todo
       id={task.id}
       name={task.name}
@@ -15,7 +17,9 @@ function App(props) {
   ));
   
   function addTask(name){
-    alert(name);
+    const newTask = {id: "todo-" + nanoid(), name: name, completed:"false" };
+    console.log(newTask);
+    setTasks([...tasks, newTask]);
   }
 
   return (
@@ -47,3 +51,4 @@ export default App;
 
 //1.grab UIs to create todo.js > send props to todo.js > const Data in index.js > send Data to app.js > const taskList from Data and map into <Todo >
 //2.unique keys to each <Todo />
+//3.addTask function can grab props name into newTask and store into tasks array for taskList by using [tasks and setTasks]
