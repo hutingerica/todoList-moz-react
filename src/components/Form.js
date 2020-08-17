@@ -1,8 +1,14 @@
 import React from 'react';
 
 export default function Form(props){
+
+    function handleSubmit(e){
+        e.preventDefault();
+        props.addTask("Hello World");
+    }
+
     return(
-        <form>
+        <form onSubmit={handleSubmit}>
             <h2 className="label-wrapper">
                 <label htmlFor="new-todo-input" className="label__lg">
                     What needs to be done?
@@ -22,3 +28,9 @@ export default function Form(props){
 
     );
 }
+
+//callback props: We need a way to pass information from <Form /> to <App /> 
+// we cant pass data from child to parent in the same way as we pass data from parent to child using standard props.
+//Instead, we can write a function in <App /> that will expect some data from our form as an input, then pass that function to <Form /> as a prop. This function-as-a-prop is called a callback prop. Once we have our callback prop, we can call it inside <Form /> to send the right data to <App />.
+
+//useState hook
