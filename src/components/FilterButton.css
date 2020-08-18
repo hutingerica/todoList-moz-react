@@ -1,0 +1,43 @@
+.toggle-btn{
+    cursor: pointer;
+    display: inline-block;
+    outline: none;
+    background: transparent;
+    font-family: inherit;
+    font-size: .8rem;
+    border: none;
+    border-radius: 100px;
+    padding: .1rem .5rem .1rem .25rem;
+    margin-right: .5rem;
+    transition: 300ms ease;
+    font-weight: 600;
+    color: #5d5d68;
+}
+.toggle-btn-focus{
+    cursor: pointer;
+    display: inline-block;
+    outline: none;
+    background: transparent;
+    font-family: inherit;
+    font-size: .8rem;
+    border: none;
+    border-radius: 100px;
+    padding: .1rem .5rem .1rem .25rem;
+    margin-right: .5rem;
+    transition: 300ms ease;
+    font-weight: 600;
+    color: #5d5d68;
+    box-shadow: #348d1e 0px 0px 0px 2px;
+}
+
+
+.span-dot{
+    border-radius: 100px;
+    height: .75em;
+    width: .75em;
+    display: inline-block;
+    margin-right: .5rem;
+    vertical-align: baseline;
+    background-color: #348d1e;
+
+}

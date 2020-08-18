@@ -1,0 +1,70 @@
+.task-form {
+    margin: 0;
+    display: block;
+    margin:.5rem;
+    padding: .5rem;
+    overflow: hidden;
+    background: #fff;
+}
+
+.task-add-input {
+    width: calc(92%);
+    float: left;
+    background: transparent;
+}
+.task-add-btn {
+    float: right;
+}
+.task-add-btn {
+    cursor: pointer;
+    display: inline-block;
+    outline: none;
+    font-family: inherit;
+    font-size: .8rem;
+    border: none;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50px;
+    padding: 0;
+    font-size: 2rem;
+    background: transparent;
+    transition: 150ms ease;
+}
+.task-add-btn svg {
+    display: block;
+    stroke: #555;
+    stroke-width: 2px;
+    stroke-linecap: round;
+    width: 100%;
+    height: 100%;
+    stroke: #348d1e;
+}
+.task-add-btn:hover {
+    background: #f2f2f2;
+}
+.task-add-btn:active {
+    box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.1);
+    background: #e6e6e6;
+}
+
+.task-add-input input[type=text] {
+    font-weight: 500;
+    letter-spacing: .1ch;
+    display: block;
+    background: transparent;
+    color: #348d1e;
+    border: none;
+    height: 2rem;
+    line-height: 2rem;
+    font-size: 1.2rem;
+    font-family: inherit;
+    width: 100%;
+    outline: none;
+    transition: 300ms ease;
+}
+.task-add-input input[type=text]:focus {
+    background: #f8f8f8;
+}
+.task-add-input input[type=text]::placeholder {
+    color: #348d1e
+}

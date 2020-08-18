@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './Form.css'
 
 export default function Form(props){
     const[name, setName] = useState('');
@@ -6,7 +7,7 @@ export default function Form(props){
     function handleChange(e){
         setName(e.target.value);
     }
-    
+
     function handleSubmit(e){
         e.preventDefault();
         props.addTask(name);
@@ -14,23 +15,22 @@ export default function Form(props){
     }
 
     return(
-        <form onSubmit={handleSubmit}>
-            <h2 className="label-wrapper">
-                <label htmlFor="new-todo-input" className="label__lg">
-                    What needs to be done?
-                </label>
-            </h2>
-            <input
-            type="text"
-            id="new-todo-input"
-            className="input input__lg"
-            name="text"
-            autoComplete="off"
-            onChange={handleChange}
-            value={name}
-            />
-            <button type="submit" className="btn btn__primary btn__lg">
-                Add
+        <form onSubmit={handleSubmit} className="task-form">
+            <div className="task-add-input">
+                <input
+                type="text"
+                id="new-todo-input"
+                placeholder="What do you want to do ?"
+                name="text"
+                autoComplete="off"
+                onChange={handleChange}
+                value={name}
+                />
+            </div>
+            <button type="submit" className="task-add-btn">
+                <svg viewBox="0 0 40 40">
+                    <path d="M10 20 L30 20 M20 10 L20 30" />
+                </svg>
             </button>
         </form>
 

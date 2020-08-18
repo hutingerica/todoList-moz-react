@@ -1,0 +1,91 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+html {
+    font-family: Lato, 'Segoe UI', 'Helvetica Neue', sans-serif;
+    font-size: 18px;
+    color: #333;
+}
+body {
+    margin: 0;
+}
+body {
+    padding: 2rem;
+    background: #ebebeb;
+}
+a {
+    text-decoration: none;
+    color: #0000cc;
+}
+a:hover {
+    text-decoration: underline;
+}
+h1 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: .1ch;
+    color: #5d5d68;
+    margin: 0 0 1em;
+    padding: 0 0 1em;
+    line-height: 1;
+    position: relative;
+}
+h1:after {
+    display: block;
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 80px;
+    bottom: 0;
+    background: #348d1e;
+}
+
+h2 {
+    font-weight: 500;
+    font-size: 1.2rem;
+    letter-spacing: .1ch;
+    color: #5d5d68;
+    position: relative;
+    margin: 0;
+}
+
+.app {
+    padding: 0 0 3px;
+    margin: 0 auto;
+    background: #fff;
+    box-shadow: 0 5px 20px rgba(14, 80, 23, 0.219);
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+}
+.app::after {
+    display: block;
+    position: absolute;
+    content: '';
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    border-radius: 0 0 50px 50px;
+    background: linear-gradient(to right, #348d1e, #3b6331);
+}
+
+.status{
+    border-bottom: 1px solid #dedeed ;
+    margin: 0 1rem;
+    padding: 3rem 0rem 1rem;
+    display:flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.task-list {
+    padding: 0;
+    margin: 0;
+    background: #fff;
+}
+.toggle-wrap{
+    display:flex;
+    flex-wrap:wrap;
+}
