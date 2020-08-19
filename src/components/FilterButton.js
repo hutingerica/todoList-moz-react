@@ -14,6 +14,7 @@ export default function FilterButton(props){
             >
                 <span className="span-dot"></span>
                 <span>{props.name}</span>
+                
             </button>
         </div>
 

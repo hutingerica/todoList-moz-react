@@ -10,8 +10,12 @@ export default function Form(props){
 
     function handleSubmit(e){
         e.preventDefault();
+        if(name === ''){
+            alert('Please type your text')
+        }else{
         props.addTask(name);
         setName("")
+        }
     }
 
     return(

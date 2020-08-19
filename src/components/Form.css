@@ -51,7 +51,7 @@
     font-weight: 500;
     letter-spacing: .1ch;
     display: block;
-    background: transparent;
+    background: #f8f8f8;
     color: #348d1e;
     border: none;
     height: 2rem;
@@ -63,7 +63,7 @@
     transition: 300ms ease;
 }
 .task-add-input input[type=text]:focus {
-    background: #f8f8f8;
+    background: #ebebeb;
 }
 .task-add-input input[type=text]::placeholder {
     color: #348d1e

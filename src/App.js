@@ -27,11 +27,12 @@ function App(props) {
       deleteTask={deleteTask}
       editTask={editTask}
       key={task.id}
-      />
-  ));
+      />)
+    );
+
   const tasksNoun = taskList.length !== 1 ? "tasks" : "task";
   const headingText = `${taskList.length} ${tasksNoun} on the list`;
-  
+
   const filterList = FILTER_NAMES.map(name => (
     <FilterButton
       key={name}
@@ -40,6 +41,7 @@ function App(props) {
       setFilter={setFilter}
     />
   ))
+
   function addTask(name){
     const newTask = {id: "todo-" + nanoid(), name: name, completed: false };
     console.log(newTask);
